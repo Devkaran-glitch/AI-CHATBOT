@@ -1,7 +1,7 @@
 
 const API_KEY = "AIzaSyBDs1m0AuJ6xWp1KqTxXM6Yjq-Z854l4vw";
 
-// We use the latest stable model: gemini-2.5-flash
+
 const MODEL = "gemini-2.5-flash";
 
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
@@ -168,4 +168,5 @@ messagesEl.appendChild(
   )
 );
 scrollToBottom();
+
 
