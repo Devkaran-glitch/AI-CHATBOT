@@ -76,7 +76,7 @@ function replaceWithAI(node, html) {
 }
 
 async function callGemini(prompt) {
-  // 1. Safety check for the API Key
+  
   if (!API_KEY || API_KEY.startsWith("PASTE") || API_KEY.length < 10) {
     return "⚠️ Error: Please open script.js and paste your valid Google API Key.";
   }
@@ -93,14 +93,13 @@ async function callGemini(prompt) {
     });
 
     if (!res.ok) {
-      // 2. Enhanced Error Handling
+     
       const errText = await res.text();
       let errMsg = `${res.status} ${res.statusText}`;
 
       try {
         const jsonErr = JSON.parse(errText);
-        // If the model is not found, it usually means the MODEL string is wrong
-        // or the API key doesn't have access to it.
+
         if (jsonErr.error && jsonErr.error.message) {
           errMsg = jsonErr.error.message;
         }
@@ -116,7 +115,7 @@ async function callGemini(prompt) {
     return text;
   } catch (err) {
     console.error(err);
-    // User-friendly error message
+
     if (err.message.includes("404") || err.message.includes("not found")) {
       return `⚠️ Model Error: The model '${MODEL}' was not found. Try changing the MODEL variable in script.js to 'gemini-1.5-flash-001'.`;
     }
@@ -137,7 +136,6 @@ async function sendMessage() {
 
   const reply = await callGemini(text);
 
-  // Artificial delay for feel
   await new Promise((r) =>
     setTimeout(r, 300 + Math.min(reply.length * 10, 1500))
   );
@@ -165,3 +163,4 @@ messagesEl.appendChild(
   )
 );
 scrollToBottom();
+
