@@ -1,6 +1,4 @@
-// ==========================================
-// ⚠️ IMPORTANT: Paste your NEW API Key below
-// ==========================================
+
 const API_KEY = "AIzaSyBDs1m0AuJ6xWp1KqTxXM6Yjq-Z854l4vw";
 
 // We use the latest stable model: gemini-2.5-flash
@@ -170,3 +168,4 @@ messagesEl.appendChild(
   )
 );
 scrollToBottom();
+
