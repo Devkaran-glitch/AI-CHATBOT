@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot — Gemini AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">AI</div>
+        <div>
+          <div class="title">Chatbot</div>
+          <div class="subtitle">Powered by Google Gemini</div>
+        </div>
+      </div>
+
+      <div class="chat-wrap">
+        <div id="messages" class="messages" aria-live="polite"></div>
+      </div>
+
+      <div class="composer">
+        <textarea
+          id="input"
+          class="input"
+          placeholder="Ask anything..."
+          rows="1"
+        ></textarea>
+        <button id="send" class="send-btn">Send ➤</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
