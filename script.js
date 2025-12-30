@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyBDs1m0AuJ6xWp1KqTxXM6Yjq-Z854l4vw";
+const API_KEY = "AIzaSyDReEi5IaDu1WH38x_pAEkBhBmi03yFWQs";
 
 const MODEL = "gemini-2.5-flash";
 
@@ -163,4 +163,5 @@ messagesEl.appendChild(
   )
 );
 scrollToBottom();
+
 
